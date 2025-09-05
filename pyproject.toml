@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nautilus-app"
+version = "0.1.0"
+description = "Simple Binance trading CLI"
+requires-python = ">=3.10"
+dependencies = [
+    "python-binance==1.0.17",
+    "python-dotenv==1.0.1",
+    "typer==0.12.3",
+    "rich==13.7.1",
+    "click==8.1.7",
+]
+
+[project.scripts]
+nautilus = "nautilus_app.cli:app"
+
+
