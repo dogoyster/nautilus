@@ -40,7 +40,7 @@ EOF
 
 ```bash
 BINANCE_API_KEY=YOUR_KEY BINANCE_API_SECRET=YOUR_SECRET BINANCE_USE_TESTNET=1 \
-  python -m nautilus_app.cli price BTCUSDT
+  python -m binance.cli price BTCUSDT
 ```
 
 ### 사용법
@@ -48,50 +48,50 @@ BINANCE_API_KEY=YOUR_KEY BINANCE_API_SECRET=YOUR_SECRET BINANCE_USE_TESTNET=1 \
 - 도움말 보기
 
 ```bash
-python -m nautilus_app.cli --help
+python -m binance.cli --help
 ```
 
 - 시세 조회
 
 ```bash
-python -m nautilus_app.cli price BTCUSDT
+python -m binance.cli price BTCUSDT
 ```
 
 - 잔고 조회 (0이 아닌 잔고)
 
 ```bash
-python -m nautilus_app.cli balances
+python -m binance.cli balances
 ```
 
 - 시장가 매수/매도 (수량은 기초자산 수량)
 
 ```bash
-python -m nautilus_app.cli buy BTCUSDT 0.001
-python -m nautilus_app.cli sell BTCUSDT 0.001
+python -m binance.cli buy BTCUSDT 0.001
+python -m binance.cli sell BTCUSDT 0.001
 ```
 
 - 지정가 매수/매도 (특정 가격에 주문)
 
 ```bash
-python -m nautilus_app.cli limit-buy BTCUSDT 0.001 50000
-python -m nautilus_app.cli limit-sell BTCUSDT 0.001 60000
+python -m binance.cli limit-buy BTCUSDT 0.001 50000
+python -m binance.cli limit-sell BTCUSDT 0.001 60000
 ```
 
 - 손절매/익절매 주문
 
 ```bash
-python -m nautilus_app.cli stop-loss BTCUSDT 0.001 45000
-python -m nautilus_app.cli take-profit BTCUSDT 0.001 65000
+python -m binance.cli stop-loss BTCUSDT 0.001 45000
+python -m binance.cli take-profit BTCUSDT 0.001 65000
 ```
 
 - 미체결 주문 조회 / 주문 취소
 
 ```bash
-python -m nautilus_app.cli orders
-python -m nautilus_app.cli cancel BTCUSDT <ORDER_ID>
+python -m binance.cli orders
+python -m binance.cli cancel BTCUSDT <ORDER_ID>
 ```
 
-참고: zsh 환경에서 `nautilus` 명령이 자동 교정될 수 있으므로, 안정적으로 사용하려면 `python -m nautilus_app.cli ...` 형태를 권장합니다. 패키지 스크립트 엔트리(`nautilus`)도 함께 설치됩니다.
+참고: 안정적으로 사용하려면 `python -m binance.cli ...` 형태를 권장합니다. 패키지 스크립트 엔트리(`binance-cli`)도 함께 설치됩니다.
 
 ### 추가 정보
 
